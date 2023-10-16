@@ -8,6 +8,7 @@ const mockContactApi = () => new Promise((resolve) => { setTimeout(resolve, 1000
 
 const Form = ({ onSuccess, onError }) => {
   const [sending, setSending] = useState(false);
+
   const sendContact = useCallback(
     async (evt) => {
       evt.preventDefault();
@@ -16,6 +17,8 @@ const Form = ({ onSuccess, onError }) => {
       try {
         await mockContactApi();
         setSending(false);
+        // Ajout du onSuccess pour afficher la modale une fois le formulaire validé
+        onSuccess();
       } catch (err) {
         setSending(false);
         onError(err);
