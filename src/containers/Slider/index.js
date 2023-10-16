@@ -11,11 +11,13 @@ const Slider = () => {
     new Date(evtB.date) - new Date(evtA.date));
     // Modification de la méthode sort pour avoir l'ordre décroissant du slider
   const nextCard = () => {
-    setTimeout(
-      () => setIndex(index < byDateDesc.length - 1 ? index + 1 : 0),
-      5000
-    // Correction du .length pour avoir la longueur du tableau
-    );
+    if (byDateDesc) {
+      setTimeout(
+        () => setIndex(index < byDateDesc.length - 1 ? index + 1 : 0),
+        5000
+      // Correction du .length pour avoir la longueur du tableau
+      );
+    }
   };
   useEffect(() => {
     nextCard();
@@ -44,6 +46,7 @@ const Slider = () => {
                   type="radio"
                   name="radio-button"
                   checked={radioIdx === index}
+                  readOnly
                 />
               ))}
             </div>
