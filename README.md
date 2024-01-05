@@ -1,7 +1,9 @@
-# 724 Events
+# Projet n°10 - 724 Events - Parcours Intégrateur Web OpenClassRooms
 
-## Description
-L'application est le site d'une agence evenementielle.
+- L'application est le site d'une agence evenementielle, qui comporte des bugs. <br>
+- Réalisation de correctifs pour rendre le site fonctionnel. <br>
+- Initiation du debbugging et review de code.
+
 ## Pre-requis
 - NodeJS  >= v16.14.1
 
